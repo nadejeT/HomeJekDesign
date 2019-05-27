@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Page1Activity">
+
+    <ImageView
+        android:id="@+id/toubib"
+        android:layout_width="145dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        app:srcCompat="@mipmap/ic_supplier" />
+
+    <ImageView
+        android:id="@+id/tel"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="66dp"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/arrowd" />
+
+    <ImageButton
+        android:id="@+id/muscleBtn"
+        android:layout_width="66dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/imageButton"
+        android:background="@drawable/border_button"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="379dp"
+        android:layout_height="224dp"
+        android:layout_above="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/Doctors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="249dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Nos employés"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="329dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        android:text="Tous nos employés sont à votre disposition, il suffit de choisir le service "
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        app:srcCompat="@drawable/page2" />
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        tools:context=".SignUpActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="180dp"
+                    android:maxHeight="100dp"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/whitev2tiny" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="horizontal">
+
+             <customfonts.EditText__SF_Pro_Display_Medium
+                 android:id="@+id/nom_txt"
+                 android:layout_width="120dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="41dp"
+                 android:layout_marginRight="41dp"
+                 android:hint="Nom"
+                 android:inputType="text"
+                 android:paddingLeft="20dp"
+                 android:paddingTop="14dp"
+                 android:paddingBottom="14dp"
+                 android:textColor="@android:color/white"
+                 android:textColorHint="#ffffff"
+                 android:textSize="11.5sp" />
+
+             <customfonts.EditText__SF_Pro_Display_Medium
+                 android:id="@+id/prenomtxt"
+                 android:layout_width="120dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="-10dp"
+                 android:layout_marginRight="41dp"
+                 android:hint="Prenom"
+                 android:inputType="text"
+                 android:paddingLeft="0dp"
+                 android:paddingTop="14dp"
+                 android:paddingBottom="14dp"
+                 android:textColor="@android:color/white"
+                 android:textColorHint="#ffffff"
+                 android:textSize="11.5sp" />
+         </LinearLayout>
+
+         <customfonts.EditText__SF_Pro_Display_Medium
+             android:id="@+id/date_de_naissance_txt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="41dp"
+             android:layout_marginRight="41dp"
+             android:hint="Date de naissance"
+             android:inputType="text"
+             android:paddingLeft="20dp"
+             android:paddingTop="20dp"
+             android:paddingBottom="14dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="#ffffff"
+             android:textSize="11.5sp"
+             tools:inputType="date" />
+
+         <customfonts.EditText__SF_Pro_Display_Medium
+             android:id="@+id/email_txt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="41dp"
+             android:layout_marginTop="21dp"
+             android:layout_marginRight="41dp"
+             android:hint="Email"
+             android:inputType="textEmailAddress"
+             android:paddingLeft="20dp"
+             android:paddingTop="10dp"
+             android:paddingRight="13dp"
+             android:paddingBottom="14dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="#ffffff"
+             android:textSize="11.5sp" />
+
+         <customfonts.EditText__SF_Pro_Display_Medium
+             android:id="@+id/telephone_txt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="41dp"
+             android:layout_marginTop="21dp"
+             android:layout_marginRight="41dp"
+             android:hint="Numéro de telephone"
+             android:inputType="number"
+             android:paddingLeft="20dp"
+             android:paddingTop="13dp"
+             android:paddingRight="13dp"
+             android:paddingBottom="14dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="#ffffff"
+             android:textSize="11.5sp" />
+
+         <customfonts.EditText__SF_Pro_Display_Medium
+             android:id="@+id/mdp_txt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="41dp"
+             android:layout_marginTop="21dp"
+             android:layout_marginRight="41dp"
+             android:drawableRight="@drawable/ic_eye"
+             android:hint="Mot de passe"
+             android:inputType="textPassword"
+             android:paddingLeft="20dp"
+             android:paddingTop="13dp"
+             android:paddingRight="13dp"
+             android:paddingBottom="14dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="#ffffff"
+             android:textSize="11.5sp" />
+
+         <customfonts.EditText__SF_Pro_Display_Medium
+             android:id="@+id/conf_mdp_txt"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginLeft="41dp"
+             android:layout_marginTop="21dp"
+             android:layout_marginRight="41dp"
+             android:drawableRight="@drawable/ic_eye"
+             android:hint="Confirmer Mot de passe"
+             android:inputType="textPassword"
+             android:paddingLeft="20dp"
+             android:paddingTop="13dp"
+             android:paddingRight="13dp"
+             android:paddingBottom="14dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="#ffffff"
+             android:textSize="11.5sp" />
+
+         <customfonts.MyTextView_SF_Pro_Display_Medium
+             android:id="@+id/loginbtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginTop="20dp"
+             android:background="@drawable/gradient_button"
+             android:paddingLeft="48dp"
+             android:paddingTop="11dp"
+             android:paddingRight="48dp"
+             android:paddingBottom="11dp"
+             android:text="Créer mon compte"
+             android:textAllCaps="false"
+             android:textColor="@android:color/white"
+             android:textSize="11.5sp" />
+
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginTop="15dp"
+             android:layout_marginBottom="15dp"
+             android:orientation="horizontal">
+
+             <customfonts.TextViewSFProDisplayRegular
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Déjà utilisateur? "
+                 android:textColor="#B3ffffff"
+                 android:textSize="11.5sp" />
+
+             <customfonts.MyTextView_SF_Pro_Display_Semibold
+                 android:id="@+id/toLoginTxt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="9dp"
+                 android:text="Se connecter"
+                 android:textColor="#ffffff"
+                 android:textSize="11.5sp" />
+
+         </LinearLayout>
+
+     </LinearLayout>
+
+    </RelativeLayout>
+

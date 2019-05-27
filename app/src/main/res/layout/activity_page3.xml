@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Page3Activity">
+
+    <ImageView
+        android:id="@+id/toubib"
+        android:layout_width="145dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        app:srcCompat="@drawable/locationlogo" />
+
+    <ImageView
+        android:id="@+id/tel"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        app:srcCompat="@drawable/phone" />
+
+
+    <TextView
+        android:id="@+id/Doctors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="249dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Où que vous soyez"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="329dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        android:text="Nos employés sont prêts à venir vous servir"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttontoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_below="@+id/tel"
+        android:layout_marginTop="209dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/quicksand_light"
+        android:paddingBottom="20dp"
+        android:text="Se connecter"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
