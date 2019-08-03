@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,14 +8,11 @@
     >
 
 
-
     <LinearLayout
+        android:id="@+id/parentlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
-
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,44 +28,64 @@
                     android:id="@+id/market"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/supermarket"
-                    android:scaleType="fitXY"
-                    android:background="@drawable/rounded"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"/>
-
-
-                <ImageView
-                    android:id="@+id/marketShadow"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="#80000000"
                     android:scaleType="fitXY"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:src="@drawable/supermarket" />
+
 
                 <customfonts.MyTextView
                     android:id="@+id/sport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
                     android:letterSpacing="0.1"
                     android:text="Super Design"
-                    android:textColor="#fff"
-                    android:textSize="16dp"
-                    android:layout_gravity="bottom"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/quicksand_medium" />
+
+                <customfonts.MyTextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginTop="0dp"
+                    android:letterSpacing="0.1"
+                    android:text="Super Design"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp" />
 
+                <ImageView
+                    android:id="@+id/stateicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/ic_available" />
 
-
+                <customfonts.MyTextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="60dp"
+                    android:letterSpacing="0.1"
+                    android:text="Super Design"
+                    android:textColor="@color/colorGrayF"
+                    android:textSize="14dp" />
             </FrameLayout>
 
 
-
         </LinearLayout>
-
 
 
     </LinearLayout>

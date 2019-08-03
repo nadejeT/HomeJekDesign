@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_profile"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+
+        >
+
+        <FrameLayout
+            android:layout_width="299dp"
+            android:layout_height="450dp"
+            android:background="@drawable/orderbg"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ordersummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/gradient_button"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="50dp"
+                    >
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/order"
+
+                        />
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VOTRE FACTURE  "
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="16dp"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/ordernumber"
+                    android:layout_below="@+id/ordersummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="26dp"
+                    >
+
+                    <customfonts.MyTextView
+                        android:layout_weight="0.8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Commande num:"
+                        android:textColor="@color/text"
+                        android:textSize="16dp"
+                        android:gravity="right"
+                        android:layout_gravity="center"
+                        />
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="#4343"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="21dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="left"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/div1"
+                    android:layout_below="@+id/ordernumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    ></View>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/date"
+                    android:layout_below="@+id/div1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="55dp"
+                    >
+
+
+                    <ImageView
+
+                        android:layout_width="45dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_date_naissance"
+                        android:layout_gravity="right"
+                        />
+
+                    <customfonts.MyTextView
+                        android:id="@+id/commande_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="May 14, 2016"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="21dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/div2"
+                    android:layout_below="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    ></View>
+
+
+                <View
+                    android:id="@+id/div3"
+                    android:layout_below="@+id/div2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    ></View>
+
+
+                <LinearLayout
+                    android:id="@+id/items"
+                    android:layout_below="@+id/div3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="5dp"
+                        >
+
+                        <customfonts.MyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/order"
+                            android:drawablePadding="13dp"
+                            android:text="Coiffure simple"
+                            android:textColor="@color/text"
+                            android:textSize="17dp" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <customfonts.MyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="20 TND"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="21dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <View
+                    android:id="@+id/div4"
+                    android:layout_below="@+id/items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    ></View>
+
+
+
+                <LinearLayout
+                    android:id="@+id/total"
+                    android:layout_below="@+id/div4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    >
+
+                    <customfonts.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="TOTAL"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20 TND"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="26dp"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="left"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/confirm"
+                    android:layout_below="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/devis_gif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/locationlogogif"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:visibility="invisible" />
+
+
+                    <customfonts.MyTextView_SF_Pro_Display_Medium
+                        android:id="@+id/confirm_devis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/gradient_button"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="11dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="11dp"
+                        android:text="Confirmer"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

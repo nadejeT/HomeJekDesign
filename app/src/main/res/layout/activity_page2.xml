@@ -60,7 +60,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="249dp"
         android:fontFamily="@font/quicksand_medium"
-        android:text="Nos employés"
+        android:text="Nos partenaires"
         android:textColor="#ffffff"
         android:textSize="24sp" />
 
@@ -71,7 +71,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="139dp"
-        android:text="Tous nos employés sont à votre disposition, il suffit de choisir le service "
+        android:text="Tous nos partenaires sont à votre disposition, il suffit de choisir le service "
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="16sp" />

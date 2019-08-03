@@ -25,7 +25,7 @@ public class Profile extends Fragment {
     private RecyclerView recyclerview;
     private ArrayList<ProfileModel> profileModelArrayList;
 
-    Integer inbox[]={R.drawable.ic_heart,R.drawable.ic_heart,R.drawable.ic_heart,R.drawable.ic_star,R.drawable.ic_heart,R.drawable.ic_heart};
+    Integer inbox[]={R.drawable.ic_mot_de_passe,R.drawable.ic_mail,R.drawable.ic_telephone,R.drawable.ic_telephone,R.drawable.ic_date_naissance,R.drawable.ic_heart};
     Integer arrow[]={R.drawable.ic_chevron_right_black_24dp,R.drawable.ic_chevron_right_black_24dp,R.drawable.ic_chevron_right_black_24dp,R.drawable.ic_chevron_right_black_24dp,R.drawable.ic_chevron_right_black_24dp,R.drawable.ic_chevron_right_black_24dp};
     String txttrades[]={"Mon Mot de passe","Mon adresse mail","Mon numéro de telephone","Ma date de naissance","Mon Profil","Deconnexion"};
     String txthistory[]={"Modifier mon mot de passe","Modifier mon adresse mail","Modifier mon numéro de telephone","Modifier ma date de naissance","Modifier mon profil complet","Aurevoir HomeJek!"};
@@ -48,6 +48,7 @@ public class Profile extends Fragment {
         }
         profileAdapter = new ProfileAdapter(v.getContext(),profileModelArrayList);
         recyclerview.setAdapter(profileAdapter);
+
 
         return v;
     }

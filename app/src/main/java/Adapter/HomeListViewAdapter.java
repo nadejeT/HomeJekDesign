@@ -8,40 +8,44 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.homejek.ui.MainActivity;
 import com.homejek.ui.R;
 
 import java.util.ArrayList;
 
 import Models.HomeListView;
+import fragments.Gender;
 import fragments.Home;
 
 public class HomeListViewAdapter extends BaseAdapter {
     private Context context;
-    private ArrayList<HomeListView> beanClassArrayList;
+    private ArrayList<HomeListView> HomeListViewArrayList;
 
-    public HomeListViewAdapter(Context context, ArrayList<HomeListView> beanClassArrayList) {
+    public HomeListViewAdapter(Context context, ArrayList<HomeListView> HomeListViewArrayList) {
         this.context = context;
-        this.beanClassArrayList = beanClassArrayList;
-
-
+        this.HomeListViewArrayList = HomeListViewArrayList;
     }
+
 
     @Override
     public int getCount() {
-        return beanClassArrayList.size();
+        return HomeListViewArrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return beanClassArrayList.get(position);
+        return HomeListViewArrayList.get(position);
     }
 
     @Override
@@ -52,7 +56,7 @@ public class HomeListViewAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        ViewHoder viewHoder;
+        final ViewHoder viewHoder;
         if (convertView == null) {
 
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
@@ -63,8 +67,10 @@ public class HomeListViewAdapter extends BaseAdapter {
 
             viewHoder.image = (ImageView) convertView.findViewById(R.id.market);
             viewHoder.title = (TextView) convertView.findViewById(R.id.sport);
-
-
+            viewHoder.description = (TextView) convertView.findViewById(R.id.desc);
+            viewHoder.state = convertView.findViewById(R.id.state);
+            viewHoder.stateicon = convertView.findViewById(R.id.stateicon);
+            viewHoder.parentLayout = convertView.findViewById(R.id.parentlayout);
 
             convertView.setTag(viewHoder);
 
@@ -73,21 +79,32 @@ public class HomeListViewAdapter extends BaseAdapter {
             viewHoder = (ViewHoder) convertView.getTag();
         }
 
-        //  NavigationItems rowItem = (NavigationItems) getItem(position);
 
-        HomeListView beanClass = (HomeListView) getItem(position);
+        HomeListView HomeListViewItem = (HomeListView) getItem(position);
 
-        viewHoder.title.setText(beanClass.getTitle());
-        //viewHoder.description.setText(beanClass.getDescription());
+        viewHoder.title.setText(HomeListViewItem.getTitle());
+        viewHoder.description.setText(HomeListViewItem.getDescription());
+        viewHoder.state.setText(HomeListViewItem.getState());
 
-        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), beanClass.getImage());
-        viewHoder.image.setImageBitmap(getRoundedCornerBitmap(bitmap, 20));
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), HomeListViewItem.getImage());
+        ///////////////////IMAGEBITMAP///////////////////
+        viewHoder.stateicon.setImageResource(HomeListViewItem.getStateIcon());
+       viewHoder.image.setImageBitmap(getRoundedCornerBitmap(bitmap, 20));
 
+       viewHoder.parentLayout.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if(HomeListViewArrayList.get(position).getTitle().equals("Coiffure")){
+                   Log.e("COIFFURE",HomeListViewArrayList.get(position).getTitle());
 
-//        viewHoder.plus.setImageResource(beanClass.getImage());
-//        viewHoder.min.setImageResource(beanClass.getImage());
-        //viewHoder.no.setText(beanClass.getNo());
+                   Gender genderfrag = new Gender();
+                   ((MainActivity)context).getSupportFragmentManager()
+                           .beginTransaction().addToBackStack("fragment")
+                           .replace(R.id.container, new fragments.Gender()).commit();
 
+               }
+           }
+       });
 
         return convertView;
 
@@ -99,11 +116,16 @@ public class HomeListViewAdapter extends BaseAdapter {
         ImageView image;
         TextView title;
         TextView description;
+        ImageView stateicon;
+        TextView state;
+        LinearLayout parentLayout;
+
 
 
     }
 
-    public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels) {
+
+  public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels) {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap
                 .getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
@@ -124,4 +146,6 @@ public class HomeListViewAdapter extends BaseAdapter {
 
         return output;
     }
+
+
 }

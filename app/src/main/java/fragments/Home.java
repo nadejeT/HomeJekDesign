@@ -38,13 +38,14 @@ public class Home extends Fragment {
     private String price;
     private Button myButton;
 
-    public int[] IMAGE = {R.drawable.coif, R.drawable.course, R.drawable.reparateur, R.drawable.chauf, R.drawable.nettoyage, R.drawable.shop};
-    public String[] TITLE = {"Coiffeur", "Courses", "Réparateur",
+    public int[] IMAGE = {R.drawable.bannercoiffure1, R.drawable.bannercourse1, R.drawable.bannerreparateur1, R.drawable.bannerchauffeur1, R.drawable.bannernettoyage1, R.drawable.bannerbabysitting1};
+    public String[] TITLE = {"Coiffure", "Courses", "Réparateur",
             "Chauffeur", "Nettoyage", "Babysitter"};
-    public String[] DESCRIPTION = {"", "", "", "", "", ""};
+    public String[] DESCRIPTION = {"Besoin d'une \n nouvelle coupe?", "Laissez nous faire vos \n courses à votre place", "Ne vous soucier plus \n de vos objets cassés", "On vous conduit ou \n vous voulez", "En un clic c'est propre", "Un enfant à garder? \n C'est pour nous!"};
+    public String[] STATE = {"En cours", "Pas disponible", "Disponible", "En cours", "Disponible", "Disponible"};
+    public int[] STATEICON = {R.drawable.ic_en_cours, R.drawable.ic_not_available, R.drawable.ic_available, R.drawable.ic_en_cours, R.drawable.ic_available, R.drawable.ic_available};
 
-
-    private ArrayList<HomeListView> beanClassArrayList;
+    private ArrayList<HomeListView> HomeListViewArrayList;
     private HomeListViewAdapter listViewAdapter;
 
 
@@ -58,19 +59,21 @@ public class Home extends Fragment {
 
 
         listview = (ListView) v.findViewById(R.id.listview);
-        beanClassArrayList = new ArrayList<HomeListView>();
+        HomeListViewArrayList = new ArrayList<HomeListView>();
 
 
         for (int i = 0; i < TITLE.length; i++) {
 
-            HomeListView beanClass = new HomeListView(IMAGE[i], TITLE[i], DESCRIPTION[i]);
-            beanClassArrayList.add(beanClass);
+            HomeListView HomeCell = new HomeListView(IMAGE[i], TITLE[i], DESCRIPTION[i],STATE[i],STATEICON[i]);
+            HomeListViewArrayList.add(HomeCell);
 
         }
-        listViewAdapter = new HomeListViewAdapter(v.getContext(), beanClassArrayList);
+        listViewAdapter = new HomeListViewAdapter(v.getContext(), HomeListViewArrayList);
         listview.setAdapter(listViewAdapter);
 
         return v;
     }
+
+
 
 }

@@ -45,7 +45,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="139dp"
-        android:text="Nos employés sont prêts à venir vous servir"
+        android:text="Nos partenaires sont prêts à venir vous servir"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
