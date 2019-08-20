@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
                    item.setChecked(true);
                    Log.d("Erreur","Loading Home");
                     Log.i("Fragment","Profile");
-                   // return true;
+                   return true;
                 case R.id.navigation_achat:
-                    //mTextMessage.setText(R.string.title_achat);
+                    getSupportFragmentManager().beginTransaction().addToBackStack("fragment").replace(R.id.container, new fragments.Achat()).commit();
                     return true;
                 case R.id.navigation_about:
-                   // mTextMessage.setText(R.string.title_about);
+                    getSupportFragmentManager().beginTransaction().addToBackStack("fragment").replace(R.id.container, new fragments.APropos()).commit();
                     return true;
                 case R.id.navigation_profile:
                     getSupportFragmentManager().beginTransaction().addToBackStack("fragment").replace(R.id.container, new fragments.Profile()).commit();
