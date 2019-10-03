@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_profile"
+    android:id="@+id/rl">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/next1malade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="@drawable/suivant_page"
+        app:backgroundTint="@color/colorTransparent" />
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/topshape" />
+
+
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/patient" />
+
+    <TextView
+        android:id="@+id/hintQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Un malade à garder? On s'en charge!"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addmaladeFloatbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/plus"
+        app:backgroundTint="#FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp">
+
+        <ListView
+            android:id="@+id/maladetListViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="Suspicious0dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

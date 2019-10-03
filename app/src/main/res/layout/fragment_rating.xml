@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background_profile"
+    tools:context="fragments.RatingFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/satisait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="150dp"
+            android:gravity="center_horizontal"
+            android:text="Etes-vous satisfait de notre service ?"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.hsalf.smilerating.SmileRating
+            android:id="@+id/smile_rating"
+            app:textSelectionColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            app:placeHolderBackgroundColor="@color/colorAccent"
+            android:layout_height="wrap_content" />
+
+        <customfonts.MyTextView_SF_Pro_Display_Medium
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/gradient_button"
+            android:gravity="bottom"
+            android:paddingLeft="48dp"
+            android:paddingTop="11dp"
+            android:paddingRight="48dp"
+            android:paddingBottom="11dp"
+            android:text="Valider"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

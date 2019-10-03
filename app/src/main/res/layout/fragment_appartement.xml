@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background_profile"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19.7dp"
+                android:layout_marginRight="19.7dp"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="14.7dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Détails"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_green_border"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="180dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/custom_spinner"
+                                android:outlineSpotShadowColor="@color/colorAccent"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.7dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Date"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rect_green_border"
+                    android:orientation="horizontal"
+                    android:padding="13dp">
+
+                    <LinearLayout
+                        android:id="@+id/calender1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/today1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3.5dp"
+                            android:fontFamily="@font/quicksand"
+                            android:text="Aujourd'hui"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="16.5dp"
+                        android:layout_height="16.5dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_date_naissance" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14.7dp"
+                        android:layout_marginTop="15.8dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Prix"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.7dp"
+                    android:background="@drawable/rect_green_border_empty"
+
+                    android:orientation="horizontal"
+                    android:padding="13dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="40 TND"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <customfonts.MyTextView_SF_Pro_Display_Medium
+                    android:id="@+id/confirmerbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gradient_button"
+                    android:paddingLeft="48dp"
+                    android:paddingTop="11dp"
+                    android:paddingRight="48dp"
+                    android:paddingBottom="11dp"
+                    android:text="Confirmer"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="11.5sp" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

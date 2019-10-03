@@ -38,12 +38,12 @@ public class Home extends Fragment {
     private String price;
     private Button myButton;
 
-    public int[] IMAGE = {R.drawable.bannercoiffure1, R.drawable.bannercourse1, R.drawable.bannerreparateur1, R.drawable.bannerchauffeur1, R.drawable.bannernettoyage1, R.drawable.bannerbabysitting1};
+    public int[] IMAGE = {R.drawable.bannercoiffure1, R.drawable.bannercourse1, R.drawable.bannerreparateur1, R.drawable.bannerchauffeur1, R.drawable.bannernettoyage1, R.drawable.bannerbabysitting1, R.drawable.bannergardemalade1};
     public String[] TITLE = {"Coiffure", "Courses", "Réparateur",
-            "Chauffeur", "Nettoyage", "Babysitter"};
-    public String[] DESCRIPTION = {"Besoin d'une \n nouvelle coupe?", "Laissez nous faire vos \n courses à votre place", "Ne vous soucier plus \n de vos objets cassés", "On vous conduit ou \n vous voulez", "En un clic c'est propre", "Un enfant à garder? \n C'est pour nous!"};
-    public String[] STATE = {"En cours", "Pas disponible", "Disponible", "En cours", "Disponible", "Disponible"};
-    public int[] STATEICON = {R.drawable.ic_en_cours, R.drawable.ic_not_available, R.drawable.ic_available, R.drawable.ic_en_cours, R.drawable.ic_available, R.drawable.ic_available};
+            "Chauffeur", "Nettoyage", "Babysitting","Garde Malade"};
+    public String[] DESCRIPTION = {"Besoin d'une \n nouvelle coupe?", "Laissez nous faire vos \n courses à votre place", "Ne vous soucier plus \n de vos objets cassés", "On vous conduit ou \n vous voulez", "En un clic c'est propre", "Un enfant à garder? \n C'est pour nous!","Un malade à garder? \n On s'en charge!"};
+    public String[] STATE = {"En cours", "Pas disponible", "Disponible", "En cours", "Disponible", "Disponible","Disponible"};
+    public int[] STATEICON = {R.drawable.ic_en_cours, R.drawable.ic_not_available, R.drawable.ic_available, R.drawable.ic_en_cours, R.drawable.ic_available, R.drawable.ic_available, R.drawable.ic_available};
 
     private ArrayList<HomeListView> HomeListViewArrayList;
     private HomeListViewAdapter listViewAdapter;

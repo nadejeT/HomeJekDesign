@@ -38,4 +38,6 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:1.0.3@aar'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
     implementation 'com.github.hassanusman:CircularDialogs:1.2'
+    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
+
 }

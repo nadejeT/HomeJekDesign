@@ -25,8 +25,10 @@ import com.homejek.ui.R;
 import java.util.ArrayList;
 
 import Models.HomeListView;
+import fragments.BabysittingList;
 import fragments.Gender;
 import fragments.Home;
+import fragments.RatingFrag;
 
 public class HomeListViewAdapter extends BaseAdapter {
     private Context context;
@@ -103,6 +105,45 @@ public class HomeListViewAdapter extends BaseAdapter {
                            .replace(R.id.container, new fragments.Gender()).commit();
 
                }
+               if(HomeListViewArrayList.get(position).getTitle().equals("Babysitting")){
+                   Log.e("BabySitting",HomeListViewArrayList.get(position).getTitle());
+
+                   BabysittingList babysitting = new BabysittingList();
+                   ((MainActivity)context).getSupportFragmentManager()
+                           .beginTransaction().addToBackStack("fragment")
+                           .replace(R.id.container, new fragments.BabysittingList()).commit();
+
+               }
+
+               if(HomeListViewArrayList.get(position).getTitle().equals("Courses")){
+                   Log.e("Rating",HomeListViewArrayList.get(position).getTitle());
+
+                   RatingFrag ratingfrag = new RatingFrag();
+                   ((MainActivity)context).getSupportFragmentManager()
+                           .beginTransaction().addToBackStack("fragment")
+                           .replace(R.id.container, new fragments.RatingFrag()).commit();
+
+               }
+               if(HomeListViewArrayList.get(position).getTitle().equals("Garde Malade")){
+                   Log.e("Rating",HomeListViewArrayList.get(position).getTitle());
+
+                   RatingFrag ratingfrag = new RatingFrag();
+                   ((MainActivity)context).getSupportFragmentManager()
+                           .beginTransaction().addToBackStack("fragment")
+                           .replace(R.id.container, new fragments.GardeMaladeList()).commit();
+
+               }
+               if(HomeListViewArrayList.get(position).getTitle().equals("Nettoyage")){
+                   Log.e("Rating",HomeListViewArrayList.get(position).getTitle());
+
+                   RatingFrag ratingfrag = new RatingFrag();
+                   ((MainActivity)context).getSupportFragmentManager()
+                           .beginTransaction().addToBackStack("fragment")
+                           .replace(R.id.container, new fragments.Nettoyage()).commit();
+
+               }
+
+
            }
        });
 
