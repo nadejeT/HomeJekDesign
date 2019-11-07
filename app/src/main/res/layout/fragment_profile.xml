@@ -153,14 +153,14 @@ android:orientation="vertical">
                     android:layout_height="2.5dp"
                     android:background="@drawable/shadow" />
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler1"
                     android:layout_width="match_parent"
                     android:layout_height="419dp"
                     android:nestedScrollingEnabled="false"
                     android:paddingBottom="50dp">
 
-                </android.support.v7.widget.RecyclerView>
+                </androidx.recyclerview.widget.RecyclerView>
 
 
             </LinearLayout>

@@ -1,10 +1,8 @@
 package fragments;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.homejek.ui.MainActivity;
 import com.homejek.ui.R;
 
 import java.util.ArrayList;
@@ -38,7 +35,7 @@ public class Appartement extends Fragment {
         View view= inflater.inflate(R.layout.fragment_appartement, container, false);
 
         today1 = view.findViewById(R.id.today1);
-        confirmer = view.findViewById(R.id.confirmerbtn);
+        confirmer = view.findViewById(R.id.confirmerbtn_appartement);
         calender1 =  view.findViewById(R.id.calender1);
         calender1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +69,8 @@ public class Appartement extends Fragment {
         list.add("S + 3");
         list.add("S + 4");
         list.add("Grand ménage");
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_dropdown_nettoyage,
-                R.id.text1, list);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_item,list);
+        dataAdapter.setDropDownViewResource(R.layout.spinner_dropdown_design);
         spinner.setAdapter(dataAdapter);
 
 
@@ -85,6 +82,15 @@ public class Appartement extends Fragment {
                         .replace(R.id.container, new fragments.CoiffureDevis()).commit();
             }
         });
+
+        //Date today
+
+        Calendar c = Calendar.getInstance();
+        int day = c.get(Calendar.DAY_OF_MONTH);
+        int month = c.get(Calendar.MONTH);
+        int year = c.get(Calendar.YEAR);
+        String mydate = day + "/" + month + "/" + year;
+        today1.setText(mydate);
         return view;
     }
 

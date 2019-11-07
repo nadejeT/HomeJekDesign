@@ -5,6 +5,8 @@
     android:singleLine="true"
     android:layout_width="match_parent"
     android:gravity="center"
+    android:text="Heyyyyy"
+    android:textColor="@color/colorAccent"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/border_spinner"
     android:layout_height="60dp"

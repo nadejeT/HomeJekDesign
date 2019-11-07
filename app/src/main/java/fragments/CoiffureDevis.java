@@ -1,26 +1,16 @@
 package fragments;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.example.circulardialog.CDialog;
 import com.example.circulardialog.extras.CDConstants;
 import com.homejek.ui.R;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
-
-import java.io.IOException;
-
-import pl.droidsonroids.gif.GifDrawable;
 
 
 public class CoiffureDevis extends Fragment {

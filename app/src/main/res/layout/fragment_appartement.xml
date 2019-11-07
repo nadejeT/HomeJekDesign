@@ -5,7 +5,7 @@
     android:background="@drawable/gradient_background_profile"
     android:orientation="vertical">
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -58,7 +58,8 @@
                                 android:layout_height="45dp"
                                 android:background="@drawable/custom_spinner"
                                 android:outlineSpotShadowColor="@color/colorAccent"
-                                android:padding="10dp"
+                                android:padding="2dp"
+                                android:theme="@style/ThemeOverlay.AppCompat.Light"
                                 android:textAlignment="center"
                                 android:spinnerMode="dropdown" />
                         </LinearLayout>
@@ -156,7 +157,7 @@
                 </LinearLayout>
 
                 <customfonts.MyTextView_SF_Pro_Display_Medium
-                    android:id="@+id/confirmerbtn"
+                    android:id="@+id/confirmerbtn_appartement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -177,5 +178,5 @@
 
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

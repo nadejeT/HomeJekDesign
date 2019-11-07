@@ -3,10 +3,9 @@ package customfonts;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.support.v7.widget.*;
-import android.widget.TextView;
+import androidx.appcompat.widget.*;
 
-public class TextViewSFProDisplayRegular extends android.support.v7.widget.AppCompatTextView {
+public class TextViewSFProDisplayRegular extends androidx.appcompat.widget.AppCompatTextView {
 
     public TextViewSFProDisplayRegular(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);

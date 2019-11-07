@@ -29,8 +29,6 @@ public class CoiffureListViewAdapter extends BaseAdapter {
     Activity main;
 
 
-
-
     public CoiffureListViewAdapter( Context context, ArrayList<CoiffuresList> bean) {
 
 
@@ -69,14 +67,10 @@ public class CoiffureListViewAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.list_row,null);
 
             viewHolder = new ViewHolder();
-
-
             viewHolder.title = (TextView) convertView.findViewById(R.id.title);
             viewHolder.price = (TextView) convertView.findViewById(R.id.price);
             viewHolder.detail = (TextView) convertView.findViewById(R.id.detail);
             viewHolder.reserver = convertView.findViewById(R.id.reserver);
-
-
             viewHolder.title.setTypeface(fonts1);
 
             viewHolder.reserver.setOnClickListener(new View.OnClickListener() {
@@ -92,9 +86,6 @@ public class CoiffureListViewAdapter extends BaseAdapter {
                 }
             });
 
-
-
-
             convertView.setTag(viewHolder);
 
         }else {
@@ -109,20 +100,13 @@ public class CoiffureListViewAdapter extends BaseAdapter {
         viewHolder.price.setText(bean.getPrice());
         viewHolder.detail.setText(bean.getDetail());
 
-
-
-
-
         return convertView;
     }
 
     private class ViewHolder {
-
         TextView title;
         TextView price;
         TextView detail;
         customfonts.MyTextView reserver;
-
-
     }
 }

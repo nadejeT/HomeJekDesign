@@ -8,8 +8,8 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import Models.HomeListView;
 import fragments.BabysittingList;
 import fragments.Gender;
-import fragments.Home;
 import fragments.RatingFrag;
 
 public class HomeListViewAdapter extends BaseAdapter {

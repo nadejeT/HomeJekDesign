@@ -8,7 +8,7 @@
     android:id="@+id/rl">
 
 
-    <android.support.design.widget.FloatingActionButton
+   <!-- <android.support.design.widget.FloatingActionButton
         android:id="@+id/next1malade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         android:foreground="@drawable/suivant_page"
         app:backgroundTint="@color/colorTransparent" />
 
-
+!-->
 
 
     <ImageView
@@ -57,18 +57,8 @@
         android:textSize="18sp" />
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addmaladeFloatbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/plus"
-        app:backgroundTint="#FFFFFF" />
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/imageView2"
@@ -77,15 +67,248 @@
         android:layout_marginEnd="10dp"
         android:padding="10dp">
 
-        <ListView
-            android:id="@+id/maladetListViews"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="Suspicious0dp" />
+            android:layout_marginLeft="19.7dp"
+            android:layout_marginRight="19.7dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rect_green_border_empty"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14.7dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Tranche d'âge"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/gm_spinner"
+                        android:background="@drawable/rect_green_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="7dp"
+                        android:outlineSpotShadowColor="@color/colorAccent"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/AppTheme"
+                        android:textAlignment="center"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14.7dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rect_green_border"
+                android:orientation="horizontal"
+                android:padding="13dp">
+
+                <LinearLayout
+                    android:id="@+id/gm_date_lay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/gm_date_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:fontFamily="@font/quicksand"
+                        android:text="07 / 11 / 2019"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="16.5dp"
+                    android:layout_height="16.5dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_date_naissance" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.7dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="A partir de "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rect_green_border"
+                        android:orientation="horizontal"
+                        android:padding="13dp">
+
+                        <LinearLayout
+                            android:id="@+id/gm_from_lay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/gm_from_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.5dp"
+                                android:fontFamily="@font/quicksand"
+                                android:gravity="center"
+                                android:text="17:03"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="16.5dp"
+                            android:layout_height="16.5dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/clock_icon" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14.7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Jusqu'à "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/rect_green_border"
+                        android:orientation="horizontal"
+                        android:padding="13dp">
+
+                        <LinearLayout
+                            android:id="@+id/gm_to_lay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/gm_to_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.5dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/quicksand"
+                                android:text="17:03"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="16.5dp"
+                            android:layout_height="16.5dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/clock_icon" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
 
 
-    </RelativeLayout>
+
+            <customfonts.MyTextView_SF_Pro_Display_Medium
+                android:id="@+id/next1malade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/gradient_button"
+                android:paddingLeft="48dp"
+                android:paddingTop="11dp"
+                android:paddingRight="48dp"
+                android:paddingBottom="11dp"
+                android:text="Confirmer"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="11.5sp" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
 
 
 
